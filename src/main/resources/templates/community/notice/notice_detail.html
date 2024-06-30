@@ -13,14 +13,14 @@
         </div>
         <!--공지사항 글-->
         <div class="border-bottom border-3 p-5">
-          <pre th:text="${notice.content}">
+          <p th:text="${notice.content}">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
             ipsum neque eaque ut maxime saepe minus. Dolore sint magni delectus
             consequuntur explicabo. Voluptas quod fuga assumenda quis a quae
             odit quas nisi omnis aliquid corrupti laborum cupiditate sunt
             reprehenderit, corporis provident repudiandae officia tenetur! Modi
             optio illo distinctio reiciendis animi?
-          </pre>
+          </p>
         </div>
         <!--수정 삭제 버튼-->
         <div class="d-flex justify-content-end my-5" th:if="${loginAdmin != null}">

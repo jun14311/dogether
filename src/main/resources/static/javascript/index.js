@@ -42,11 +42,13 @@ function initMap() {
                     <div class="col-sm-12 col-md-8">
                         <div class="card-body ms-3">
                             <h5 class="card-title">${item.facility_name}</h5>
-                            <p class="card-text text-muted operate-time">
+                            <p class="card-text text-muted operate-time hidden-table">
                                 ${item.operate_time}
                             </p>
-                            <p class="card-text text-muted">
-                                ${item.road_address}<br/>
+                            <p class="card-text text-muted m-0">
+                                ${item.road_address}
+                            </p>
+                            <p class="card-text text-muted m-0 hidden-table">
                                 ${item.day_off}
                             </p>
                         </div>

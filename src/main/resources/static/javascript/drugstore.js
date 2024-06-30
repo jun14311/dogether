@@ -130,12 +130,12 @@ $(function () {
   // 병원 정보를 HTML에 업데이트하는 함수
   function updatedrugstoreInfo(drugstore) {
     $("#facilityName").text(drugstore.facility_name);
-    $("#operateTime").text(drugstore.operate_time);
-    $("#dayOff").text(drugstore.day_off || "휴무일 정보 없음");
-    $("#tel").text(drugstore.tel || "전화번호 정보 없음");
-    $("#roadAddress").text(drugstore.road_address || "주소 정보 없음");
-    $("#parking").text(drugstore.parking || "주차 정보 없음");
-    $("#petSize").text(drugstore.pet_size || "애완동물 크기 정보 없음");
+    $("#operateTime").text("운영시간 : " + drugstore.operate_time);
+    $("#dayOff").text("휴무일 : " + drugstore.day_off || "휴무일 정보 없음");
+    $("#tel").text("tel : " + drugstore.tel || "전화번호 정보 없음");
+    $("#roadAddress").text("address : " + drugstore.road_address || "주소 정보 없음");
+    $("#parking").text("parking : " + drugstore.parking || "주차 정보 없음");
+    $("#petSize").text("반려동물 크기 : " + drugstore.pet_size || "반려동물 크기 정보 없음");
 
     if (drugstore.image) {
       $("#drugstoreImage").attr("src", drugstore.image).addClass("img-fluid");

@@ -130,12 +130,12 @@ $(function () {
   // 병원 정보를 HTML에 업데이트하는 함수
   function updatepuppyshopInfo(puppyshop) {
     $("#facilityName").text(puppyshop.facility_name);
-    $("#operateTime").text(puppyshop.operate_time);
-    $("#dayOff").text(puppyshop.day_off || "휴무일 정보 없음");
-    $("#tel").text(puppyshop.tel || "전화번호 정보 없음");
-    $("#roadAddress").text(puppyshop.road_address || "주소 정보 없음");
-    $("#parking").text(puppyshop.parking || "주차 정보 없음");
-    $("#petSize").text(puppyshop.pet_size || "애완동물 크기 정보 없음");
+    $("#operateTime").text("운영시간 : " + puppyshop.operate_time);
+    $("#dayOff").text("휴무일 : " + puppyshop.day_off || "휴무일 정보 없음");
+    $("#tel").text("tel : " + puppyshop.tel || "전화번호 정보 없음");
+    $("#roadAddress").text("address : " + puppyshop.road_address || "주소 정보 없음");
+    $("#parking").text("parking : " + puppyshop.parking || "주차 정보 없음");
+    $("#petSize").text("반려동물 크기 : " + puppyshop.pet_size || "애완동물 크기 정보 없음");
 
     if (puppyshop.image) {
       $("#puppyshopImage").attr("src", puppyshop.image).addClass("img-fluid");

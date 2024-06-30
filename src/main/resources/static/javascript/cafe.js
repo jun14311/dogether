@@ -130,12 +130,12 @@ $(function () {
   // 병원 정보를 HTML에 업데이트하는 함수
   function updatecafeInfo(cafe) {
     $("#facilityName").text(cafe.facility_name);
-    $("#operateTime").text(cafe.operate_time);
-    $("#dayOff").text(cafe.day_off || "휴무일 정보 없음");
-    $("#tel").text(cafe.tel || "전화번호 정보 없음");
-    $("#roadAddress").text(cafe.road_address || "주소 정보 없음");
-    $("#parking").text(cafe.parking || "주차 정보 없음");
-    $("#petSize").text(cafe.pet_size || "애완동물 크기 정보 없음");
+    $("#operateTime").text("운영시간 : " + cafe.operate_time);
+    $("#dayOff").text("휴무일 : " + cafe.day_off || "휴무일 정보 없음");
+    $("#tel").text("tel : " + cafe.tel || "전화번호 정보 없음");
+    $("#roadAddress").text("address : " + cafe.road_address || "주소 정보 없음");
+    $("#parking").text("parking : " + cafe.parking || "주차 정보 없음");
+    $("#petSize").text("반려동물 크기 : " + cafe.pet_size || "애완동물 크기 정보 없음");
 
     if (cafe.image) {
       $("#cafeImage").attr("src", cafe.image).addClass("img-fluid");

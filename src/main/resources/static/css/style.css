@@ -69,7 +69,7 @@ footer img {
 }
 @media screen and (max-width: 575px) {
   #footer {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
@@ -90,14 +90,31 @@ footer img {
   background: #ddd;
   margin: 30px auto;
 }
+@media screen and (max-width: 575px) {
+  #introduce > p {
+    font-size: 13px;
+  }
+}
 
 /*추천리스트*/
+#recommendlist img {
+  object-fit : cover;
+}
 /*#recommendlist .card:hover {*/
 /*  background-color: rgba(172, 134, 134, 0.2);*/
 /*}*/
 /*.card img:hover {
   opacity: 0.5;
 }*/
+
+#contents table {
+  table-layout: fixed;
+}
+#contents .subject-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow : hidden;
+}
 
 /*홈 배너 이미지*/
 #index-banner-img {
@@ -123,13 +140,13 @@ footer img {
   width: 1200px;
 }
 
-#hospitalMain section {
-  display: block;
-}
+/*#hospitalMain section {*/
+/*  display: block;*/
+/*}*/
 
-.infoPic {
-  border-radius: 20px;
-}
+/*.infoPic {*/
+/*  border-radius: 20px;*/
+/*}*/
 
 /* 헤더 마진 (navbar)*/
 #hospitalHeader {
@@ -200,12 +217,16 @@ footer img {
 #question tbody td:nth-child(2) {
   text-align: start;
 }
-#question .subject-text {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow : hidden;
-  word-break: break-all;
+
+#question table{
+  font-size: 16px;
 }
+@media screen and (max-width: 767px) {
+  #question table{
+    font-size: 14px;
+  }
+}
+
 #question-detail .card {
   background-color: #f8fafb;
 }
@@ -214,7 +235,14 @@ footer img {
 #eventpage .card:hover {
   opacity: 0.7;
 }
-
+#eventpage .card-body {
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  #eventpage .card-title{
+    font-size: 14px;
+  }
+}
 /*slider*/
 #eventpage .post-slider {
   width: 100%;
@@ -263,6 +291,11 @@ footer img {
 .loginLink-Group a {
   color: rgba(153, 129, 100, 0.95);
 }
+@media screen and (max-width: 768px) {
+  .loginLink-Group a {
+    font-size: 14px;
+  }
+}
 
 .loginLink-Group a:hover {
   color: rgb(114, 33, 33);
@@ -292,7 +325,37 @@ footer img {
   background-color: rgba(153, 129, 100, 0.6);
 }
 
+/*병원, 약국, 용품점, 카페*/
+@media screen and (max-width: 575px) {
+  #hospitalHeader p {
+    font-size: 14px;
+  }
+}
+#hospitalMain .hospitalInfo img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  /*object-position: left top;*/
+}
+@media screen and (max-width: 575px) {
+  #hospitalMain .hospitalInfo img {
+    height: 200px;
+  }
+  #hospitalMain .hospitalInfo p {
+    font-size: 14px;
+    margin: 0;
+  }
+  .hospitalSearch .result button {
+    font-size: 14px;
+  }
+}
+
 #map {
-  /*width: 64vw;*/
-  height: 36vw;
+  width: 100%;
+  height: 60vw;
+}
+@media screen and (max-width: 575px) {
+  #map {
+    height: 80vw;
+  }
 }

@@ -131,12 +131,12 @@ $(function () {
   // 병원 정보를 HTML에 업데이트하는 함수
   function updateHospitalInfo(hospital) {
     $("#facilityName").text(hospital.facility_name);
-    $("#operateTime").text(hospital.operate_time);
-    $("#dayOff").text(hospital.day_off || "휴무일 정보 없음");
-    $("#tel").text(hospital.tel || "전화번호 정보 없음");
-    $("#roadAddress").text(hospital.road_address || "주소 정보 없음");
-    $("#parking").text(hospital.parking || "주차 정보 없음");
-    $("#petSize").text(hospital.pet_size || "애완동물 크기 정보 없음");
+    $("#operateTime").text("운영시간 : " + hospital.operate_time);
+    $("#dayOff").text("휴무일 : " + hospital.day_off || "휴무일 정보 없음");
+    $("#tel").text("tel : " + hospital.tel || "전화번호 정보 없음");
+    $("#roadAddress").text("address : " + hospital.road_address || "주소 정보 없음");
+    $("#parking").text("parking : " + hospital.parking || "주차 정보 없음");
+    $("#petSize").text("반려동물 크기 : " + hospital.pet_size || "반려동물 크기 정보 없음");
 
     if (hospital.image) {
       $("#hospitalImage").attr("src", hospital.image).addClass("img-fluid");

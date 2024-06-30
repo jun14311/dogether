@@ -82,25 +82,25 @@
             />
           </form>
             <!--Q&A 테이블-->
-            <table class="table table-hover caption-top text-center">
+            <table class="table table-sm table-hover caption-top text-center">
               <caption>
                 <small><i class="bi bi-file-earmark"></i> Total <span th:text="${paging.totalElements}">35</span> / <span th:text="${paging.number + 1}">1</span> page</small>
               </caption>
               <thead class="table-light">
                 <tr>
-                  <th>상태</th>
-                  <th>제목</th>
-                  <th>작성자</th>
-                  <th>등록일</th>
+                  <th class="align-middle">상태</th>
+                  <th class="align-middle">제목</th>
+                  <th class="align-middle">작성자</th>
+                  <th class="align-middle hidden-table">등록일</th>
                 </tr>
               </thead>
               <tbody class="table-group-divider">
                 <tr th:each="question , loop:${paging}">
-                  <td>
+                  <td class="align-middle">
                     <span class="badge text-bg-success" th:if="${#lists.size(question.answerList) > 0}">답변완료</span>
                     <span class="badge text-bg-warning" th:unless="${#lists.size(question.answerList) > 0}">미답변</span>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <i class="bi bi-lock-fill bg-secondary-subtle rounded p-1" th:if="${question.isShow}"></i>
                     <i class="bi bi-unlock-fill bg-secondary-subtle rounded p-1" th:unless="${question.isShow}"></i>
                     <a th:href="@{/community/question/question_detail/{questionid}(questionid=${question.getId()})}"
@@ -113,9 +113,9 @@
                        th:if="${question.isShow != false and loginAdmin != null}"
                        th:text="${question.subject}">Q&A제목</a>
                   </td>
-                  <td><span th:text="${question.author.name}" style="font-size: 13px">글쓴이</span></td>
+                  <td class="align-middle"><small th:text="${question.author.name}">글쓴이</small></td>
                   <!--td><small th:text="${question.author.loginId}">홍길동</small></td-->
-                  <td><span th:text="${#temporals.format(question.createDate,'yyyy-MM-dd a hh:mm')}"  style="font-size: 13px">2024-05-17</span></td>
+                  <td class="hidden-table align-middle"><small th:text="${#temporals.format(question.createDate,'yyyy-MM-dd a hh:mm')}">2024-05-17</small></td>
                 </tr>
               </tbody>
             </table>

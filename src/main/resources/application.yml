@@ -9,9 +9,13 @@ spring:
     #username: sa
     #password:
     #driver-class-name: org.h2.Driver
-      url: jdbc:mysql://localhost:3306/testproj?serverTimezone-UTC&characterEncoding=UTF-8
-      username: root
-      password: 1234
+#      url: jdbc:mysql://localhost:3306/testproj?serverTimezone-UTC&characterEncoding=UTF-8
+#      username: root
+#      password: 1234
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://ls-990ca7d23afcd7c0906f61dd7ed2769583e4f6ae.cr4g6e86ka9a.ap-northeast-2.rds.amazonaws.com/testproj?serverTimezone-UTC&characterEncoding=UTF-8
+      username: dbmasteruser
+      password: 123456789
       driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

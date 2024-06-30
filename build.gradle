@@ -22,7 +22,6 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.commonmark:commonmark:0.21.0'	//마크다운 기능 추가
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect' //후에 layout 넣을 때 활성화 할 것.

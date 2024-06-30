@@ -18,8 +18,8 @@
           </div>
           <!--Q&A 글-->
           <div class="border-bottom border-3 p-5">
-            <pre th:text="${question.content}">
-            </pre>
+            <p th:text="${question.content}">
+            </p>
           </div>
           <!--수정 삭제 버튼-->
           <div class="d-flex justify-content-end mt-5" th:if="${loginMember != null and loginMember.loginId == question.author.loginId}">
